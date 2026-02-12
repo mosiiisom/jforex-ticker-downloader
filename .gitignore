@@ -1,0 +1,35 @@
+# Python & bytecode
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+*.iws
+out/
+
+# Your generated data & logs
+data/
+logs/
+cache/
+*.parquet
+*.log
+*.log.*
+chart-downloader.log*
+
+# Misc
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+
+# Optional - keep these tracked unless they contain secrets
+# config.json

@@ -1,0 +1,22 @@
+{
+  "CHART_CACHE_PATH": "data",
+  "LOGS_PATH": "logs",
+  "HTTP_PROXY": "",
+  "HTTPS_PROXY": "",
+  "CHART_DOWNLOADER_LOG_MAX_MB": 10,
+  "CHART_DOWNLOADER_LOG_BACKUP_COUNT": 5,
+  "CHART_DOWNLOADER_LOG_LEVEL": "INFO",
+
+  "SYMBOLS_TO_STORE": [
+    "EURUSD",
+    "GBPUSD",
+    "XAUUSD",
+    "USDJPY",
+    "XAGUSD",
+    "AUDUSD",
+    "USDCHF",
+    "USDCAD"
+  ],
+
+  "RECENT_DAYS_TO_DOWNLOAD": 7
+}
