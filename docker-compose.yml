@@ -1,0 +1,27 @@
+services:
+  downloader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: jforex-downloader
+
+    # Mount your real config, data and logs folders
+    volumes:
+      - ./config.json:/app/config.json:ro           # read-only config
+      - ./data:/app/data
+      - ./logs:/app/logs
+
+    # Restart policy - good for always-on background task
+    restart: unless-stopped
+
+    # Optional: limit resources if needed
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '0.5'
+    #       memory: 512M
+
+    # Optional: environment variables if you want to override config
+    # environment:
+    #   - LOG_LEVEL=WARNING

@@ -18,6 +18,7 @@ out/
 # Your generated data & logs
 data/
 logs/
+logs/report.jsonn
 cache/
 *.parquet
 *.log
