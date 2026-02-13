@@ -16,6 +16,7 @@ cfg = load_config()
 
 URL_ROOT = 'https://datafeed.dukascopy.com/datafeed'
 CACHE_ROOT = cfg["CHART_CACHE_PATH"]
+DOWNLOAD_TIMEOUT = cfg.get("DOWNLOAD_TIMEOUT", 90)
 
 CACHE_RESAMPLED_TIMEFRAMES = True
 
@@ -171,7 +172,7 @@ def download_file(url):
     try:
         # proxies = {"http": cfg["HTTP_PROXY"], "https": cfg["HTTPS_PROXY"]}
         proxies = {}  # currently disabled in your code
-        r = requests.get(url, timeout=60, proxies=proxies)
+        r = requests.get(url, timeout=int(DOWNLOAD_TIMEOUT), proxies=proxies)
         r.raise_for_status()
         return url, r.content
     except Exception as e:
